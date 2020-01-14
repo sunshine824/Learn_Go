@@ -50,6 +50,11 @@ func sumArgs(values ...int) int {
 	return sum
 }
 
+//交换a,b位置
+func swap(a, b int) (int, int) {
+	return b, a
+}
+
 func main() {
 	fmt.Println(eval(2, 3, "_"))
 	q, r := div(5, 3)
@@ -62,4 +67,8 @@ func main() {
 
 	fmt.Println(apply(pow, 2, 3))
 	fmt.Println("1+2+3+4+5=", sumArgs(1, 2, 3, 4, 5))
+
+	a, b := 3, 4
+	a, b = swap(a, b)
+	fmt.Println(a, b)
 }
