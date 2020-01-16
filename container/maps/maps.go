@@ -9,14 +9,13 @@ func main() {
 		"site":    "imooc",
 		"quality": "notbad",
 	}
-	m1 := map[string]map[string]string{
-		"data": {"name": "chenxin"},
-		//"msg":  "不能为空",
-	}
-	m2 := make(map[string]int)
-	var m3 map[string]int
-	fmt.Println("m, m1, m2, m3:")
-	fmt.Println(m, m1, m2, m3)
+
+	m2 := make(map[string]int) // m2 == empty map
+
+	var m3 map[string]int // m3 == nil
+
+	fmt.Println("m, m2, m3:")
+	fmt.Println(m, m2, m3)
 
 	fmt.Println("Traversing map m")
 	for k, v := range m {
@@ -26,7 +25,6 @@ func main() {
 	fmt.Println("Getting values")
 	courseName := m["course"]
 	fmt.Println(`m["course"] =`, courseName)
-
 	if causeName, ok := m["cause"]; ok {
 		fmt.Println(causeName)
 	} else {
@@ -42,7 +40,4 @@ func main() {
 	name, ok = m["name"]
 	fmt.Printf("m[%q] after delete: %q, %v\n",
 		"name", name, ok)
-
-	m["cause"] = "fisrt"
-	fmt.Println(m)
 }

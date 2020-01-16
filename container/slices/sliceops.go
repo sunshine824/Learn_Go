@@ -47,7 +47,3 @@ func sliceOps() {
 	fmt.Println(tail)
 	printSlice(s2)
 }
-
-func main()  {
-	sliceOps()
-}

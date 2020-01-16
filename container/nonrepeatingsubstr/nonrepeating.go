@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func lengthOfNonRepeatingSubStr(s string) int {
 	lastOccurred := make(map[rune]int)
@@ -21,7 +23,8 @@ func lengthOfNonRepeatingSubStr(s string) int {
 }
 
 func main() {
-	lengthOfNonRepeatingSubStr("abcabcbb")
+	fmt.Println(
+		lengthOfNonRepeatingSubStr("abcabcbb"))
 	fmt.Println(
 		lengthOfNonRepeatingSubStr("bbbbb"))
 	fmt.Println(
